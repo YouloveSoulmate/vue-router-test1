@@ -3,6 +3,7 @@ import { createWebHashHistory, createRouter } from 'vue-router';
 //pages
 import Home from '@/pages/Home'
 import Example from '@/pages/Example'
+import Store from '@/pages/Store'
 
 //Routering
 export default createRouter({
@@ -17,6 +18,11 @@ export default createRouter({
             path: '/example',
             name: 'Example',
             component: Example
+        },
+        {
+            path: '/store',
+            name: 'Store',
+            component: Store
         },
     ],
 });
