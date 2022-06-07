@@ -1,4 +1,4 @@
-import Vue from 'vue'
+import { createApp } from 'vue';
 import App from '@/App.vue'
 
 import router from '@/routes'
@@ -6,12 +6,9 @@ import router from '@/routes'
 import '@/assets/scss/main.scss'
 import '@/assets/scss/common.scss'
 
-Vue.config.prouctionTip = false
+const app = createApp(App);
+app.use(router);
 
-const app = Vue.createApp({
-    router,
-    render: h => h(App),
-})
-app.use(ThePluginIWantToUse)
+// app.use(ThePluginIWantToUse)
 
 app.mount('#app')

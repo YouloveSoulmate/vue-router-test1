@@ -1,15 +1,13 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-
-// Vue.use(Router)
+import { createWebHashHistory, createRouter } from 'vue-router';
 
 //pages
 import Home from '@/pages/Home'
 import Example from '@/pages/Example'
 
 //Routering
-export default new Router ({
-    routes:[
+export default createRouter({
+    history: createWebHashHistory(),
+    routes: [
         {
             path: '/',
             name: 'Home',
@@ -20,5 +18,5 @@ export default new Router ({
             name: 'Example',
             component: Example
         },
-    ]
-})
+    ],
+});
