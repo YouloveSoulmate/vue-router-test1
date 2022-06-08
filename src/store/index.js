@@ -1,25 +1,16 @@
-
 import { createStore } from 'vuex'
+
+import store from '@/store'
 
 
 export default createStore({
-    state:{
-        message: 'Hello Vuex!'
-    },
-    mutations: {
-        setMessage(state){
-            state.message = 'Hello again'
-        }
-    },
-    actions:{
-        setMessage({commit}){
-            commit('setMessage')
-        }
-    },
     getters:{
         getMessage(state){
             return state.message
         }
+    },
+    modules:{
+        store:{}
     },
 })
 
